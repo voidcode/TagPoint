@@ -1,0 +1,379 @@
+		body
+		{
+			font-family : 'Ubuntu', "lucida grande",tahoma,verdana,arial,sans-serif;
+		}
+		input[type="email"], input[type="submuit"], input[type="text"], input[type="passeword"]
+		{
+			margin:10px 0px 0px 0px;
+			padding:5px;
+		}
+		*
+		{
+			margin:0;
+			padding:0;
+		}
+		.popup-overlay{
+			display: none;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index:1001;
+			-moz-opacity: 0.8;
+			opacity:.80;
+			filter: alpha(opacity=80);
+		}
+		.popup-box {
+			display: none;
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			width: 50%;
+			height: 50%;
+			padding: 40px;
+			background-color: white;
+			z-index:1002;
+			overflow: auto;
+			background-color:#fff;
+			color:#696273;
+			-webkit-border-radius: 5px ;
+			-moz-border-radius: 5px ;
+			border-radius:5px ;
+			-webkit-box-shadow: 5px ;
+			-moz-box-shadow: 5px ; 
+			box-shadow: 5px ;
+		}
+			.popup-box-content
+			{
+				-webkit-border-radius: 5px ;
+				-moz-border-radius: 5px ;
+				border-radius:5px ;
+				-webkit-box-shadow: 5px ;
+				-moz-box-shadow: 5px ; 
+				box-shadow: 5px ;
+			}
+				.popup-box-content ul
+				{
+					width:360px;
+					background-color:#fff;
+				}
+					.popup-box-content ul li input[type="text"]
+					{
+						color:#000;
+						font-size:14px;
+						border:1px solid black;
+					}
+					.popup-box-content ul li input[type="submit"], input[type="button"]
+					{
+						color:#3b5998;
+						padding:2px 5px;
+						font-size:14px;
+						webkit-border-radius: 5px ;
+						-moz-border-radius: 5px ;
+						border-radius:5px ;
+					}
+			
+		#wapper
+		{
+			margin:0px;
+		}
+		#wapper #top
+		{
+			background-color:#3b5998;
+			color:#fff;
+			width:100%;
+			height:90px;
+		}
+			#wapper #top #top-left
+			{
+				padding:25px 25px 0px 5px;
+				font-size:35px;
+				font-weight:bold;
+				float:left;
+				width:auto;
+			}
+				#wapper #top #top-left a
+				{
+					color:#fff;
+					font-size:35px;
+					font-weight:bold;
+					text-decoration:none;
+				}
+			#wapper #top #top-rigth
+			{
+				float:left;
+				width:850px;
+				height:20px;
+				padding:30px 15px 0px 0px;
+			}
+				#wapper #top #top-rigth img
+				{
+					height:48px;
+					margin:0px 20px 0px 0px;
+				}
+				#wapper #top #top-rigth ul
+				{ 
+					overflow:hidden;
+				} 
+					#wapper #top #top-rigth ul li
+					{ 
+					} 
+						#wapper #top #top-rigth ul li label
+						{
+							font-weight:bold;
+							font-size:11px;
+						}
+						#wapper #top #top-rigth ul li input[type="text"], input[type="password"]
+						{
+							border:1px solid black;
+							padding:3px 2px 3px 2px;
+						}
+						#wapper #top #top-rigth ul li 
+						{
+							margin:0px 0px 0px 5px;
+							border:1px solid black;
+							background-color:#5b74a8;
+							color:#fff;
+							cursor:pointer;
+							font-weight:bold;
+							cursor:pointer;
+							padding:3px 12px 3px 12px;
+						}
+				/*to login box START*/
+				#content-topbox
+				{
+					padding:10px;
+				}
+					#content-topbox ul
+					{  
+						width:770px;
+					} 
+						#content-topbox ul li
+						{ 
+							display:inline; 
+						} 
+							#content-topbox ul li input[type="email"], input[type="password"]
+							{
+								border:1px solid black;
+								padding:5px 3px 5px 3px;
+								width:200px;
+							}
+							#content-topbox ul li input[type="submit"], input[type="button"]
+							{
+								margin:0px 0px 0px 5px;
+								border:1px solid black;
+								background-color:#5b74a8;
+								color:#fff;
+								cursor:pointer;
+								font-weight:bold;7
+								cursor:pointer;
+								padding:3px 12px 3px 12px;
+							}
+		
+		#wapper #content #content-topbox
+		{
+			background-color:#e7ebf2;
+			width:auto;
+			border:1px solid #181818;
+			border-style:solid none solid none;
+		}
+		/*to login box END*/
+		
+		#wapper #content
+		{
+			background-color:#e7ebf2;
+			width:auto;
+		}
+			/*left*/
+			#wapper #content #content-left
+			{
+				float:left;
+				width:230px;
+				padding:5px 10px 10px 10px;
+			}
+				#wapper #content #content-left #content-left-addchannel
+				{
+
+				}
+				#wapper #content #content-left #content-left-addchannel input[type="text"]
+				{
+					width:190px;
+					border:1px solid #181818;
+					padding:4px 5px 4px 5px;
+					font-size:15px;
+					webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border-radius: 5px;
+					margin:0px 0px 5px 0px;
+				}
+				#wapper #content #content-left #content-left-addchannel a
+				{
+					margin:10px 0px 0px 0px;
+				}
+				#wapper #content #content-left h1
+				{
+					font-size:16px;
+					color:#181818;
+				}
+				#wapper #content #content-left ol
+				{
+					color:#3b5998;
+					margin:5px 0px 0px 0px;
+				}
+					#wapper #content #content-left ol li
+					{
+						padding:8px 14px 8px 14px;
+						font-size:13px;
+  						list-style-type:none; 
+					}
+					#wapper #content #content-left ol li:hover
+					{
+						background-color:#d8dfea;
+						text-decoration:pointer;
+						cursor:pointer;
+
+					}
+					#wapper #content #content-left ol li a
+					{
+						text-decoration:none;
+						font-weight:bold;
+						color:#322d58;
+					}
+			/*middle*/		
+			#wapper #content #content-middle
+			{
+				padding:10px 50px 20px 50px;
+				float:left;
+				width:auto;
+				height:100%;
+				background-color:none;
+			}
+					#wapper #content #content-middle #content-middle-notification
+					{
+						background-color:#181818;
+						margin:auto;
+						width:100%;
+						height:90px;
+						position:absolute;
+						left:0;
+						top:0;
+						z-index:1;
+					}
+				#wapper #content #content-middle #content-middle-top /*share-area*/
+				{
+					width:600px;
+				}
+					#wapper #content #content-middle #content-middle-top #content-middle-top-left
+					{
+							float:left;
+					}
+						#wapper #content #content-middle #content-middle-top #content-middle-top-left textarea
+						{
+							/*WIDTH*/
+							min-width:500px;
+							max-width:500px;
+							/*HEIGHT*/
+							min-height:40px;
+							max-height:400px;
+							padding:5px;
+							border:1px solid #c5cad8;
+							color:#777777;
+						}
+					#wapper #content #content-middle #content-middle-top #content-middle-top-rigth
+					{
+							margin:0px 0px 0px 5px;
+							float:left;
+					}
+						#wapper #content #content-middle #content-middle-top #content-middle-top-rigth input[type="submit"]
+						{	
+							background-color:#3b5998;
+							color:#fff;
+							padding:5px 30px 5px 20px;
+							border:1px solid #3b5998;
+							height:44px;
+							cursor:pointer;
+							font-weight:bold;
+							-webkit-border-radius: 0px 20px 20px 0px;
+							-moz-border-radius: 0px 20px 20px 0px;
+							border-radius: 0px 20px 20px 0px;
+							-webkit-box-shadow: #B3B3B3 1px 1px 1px;
+							-moz-box-shadow: #B3B3B3 1px 1px 1px; 
+							box-shadow: #B3B3B3 1px 1px 1px;
+						}
+				/*content-middle-buttom*/
+				#wapper #content #content-middle #content-middle-buttom
+				{
+					width:715px;
+				}
+					.msgbox
+					{
+						width:715px;
+					}
+					.msgbox-item
+					{
+						-webkit-border-radius: 5px;
+						-moz-border-radius: 5px;
+						border-radius: 5px;
+						background-color:#edeff4;
+						margin:6px 0px 0px 0px;
+						float:left;
+						width:498px;
+						border:1px solid #edeff4;
+					}
+						.msgbox-item-left
+						{
+							float:left;
+							margin:20px 0px 0px 20px;
+							height:60px;
+							width:60px;
+						}
+							.msgbox .msgbox-item-left img
+							{
+								width:100px;
+								background-image:url('images/default_gravatar.jpg');			
+							}
+							.msgbox h1
+							{
+								float:left;
+								font-size:16px;
+							}
+							.msgbox p
+							{
+
+								float:left;
+								width:100%;
+							}
+						.msgbox-item-rigth
+						{
+							width:330px;
+							min-height:56px;
+							padding:23px 10px 40px 10px;
+							float:left;
+							font-size:12px;
+							color:#181818;
+						}
+			/*rigth*/
+			#wapper #content #content-rigth
+			{
+				padding:3px;
+				float:right;
+			}
+				#wapper #content #content-rigth img
+				{
+					margin:3px;
+					width:60px;
+					height:60px;	
+					float:left;
+					border:2px solid #fff;
+					background-image:url('images/default_gravatar.jpg');
+					border-radius: 5px; 
+					-moz-border-radius: 5px; 
+					-webkit-border-radius: 5px; 			
+				}
+					#wapper #content #content-rigth img:hover
+					{
+						border:2px solid #3b5998;
+						cursor:pointer;
+					}
