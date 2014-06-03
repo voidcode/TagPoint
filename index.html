@@ -3,16 +3,18 @@
 	<head>
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin' rel='stylesheet' type='text/css' />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script type="js/JQuery-Session-Plugin/jquery.session.js"></script>
+		<script src="js/JQuery-Session-Plugin/jquery.session.js"></script>
+		<script src="js/core.js"></script>
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="images/icon.png" />
 		<link rel="stylesheet" href="css/default-stylesheet.css" type="text/css" >
+		
 	</head>
-	<body onload="joinChannel('test');">
+	<body>
 		<div id="wapper">
 			<div id="top">
 				<div id="top-left">
-					<a href="logon.html" title="LogOff">TagPoint</a>
+					<a href="logon.html" title="LogOff">ChannelPoint!</a>
 				</div>	
 				<div id="top-rigth">
 					<a href="javascript:void(0)" onclick="document.getElementById('popup-box').style.display='block';document.getElementById('popup-overlaylink').style.display='block'" title="">
@@ -49,13 +51,13 @@
 			</div>
 			<div id="content">
 				<div id="content-left">
-					<h1>listening on:</h1>
+					<h1>People listening on channel:</h1>
 					<div id="content-left-addchannel">
-						<input class="inputChannelTitle" type="text" placeholder="#" />
+						<input class="inputChannelTitle" type="text" placeholder="@" />
 						<img src="images/minus.png"/>
 						<img class="btnNewTag" src="images/plus.png"/>
 					</div>
-					<ol class="getChannelByUserId"></ol>
+					<ol class="getTagsByUserId"></ol>
 				</div>
 				<div id="content-middle">
 					<div id="content-middle-top">
@@ -70,7 +72,20 @@
 						
 					</div>
 					<script type="text/javascript">
-					var restservice = 'php/restservices.php';
+					var getStartTagsByUserId = function(userid){
+						$.getJSON(restservices, { 
+							Users: 'getStartTagsByUserId',
+							userId: userid
+						}, function(user) {
+							//var usersStartTags = user[0].startTags.split(',');
+							//alert(user[0].startTags.split(','));
+							$.each(user[0], function(index, element){
+								$('.getTagsByUserId').append('<li class="getTagsByUserIdLiItem'+user[0].id+'">#'+ element + '</li>');
+							});
+							alert('DONE: Users->getStartTagsByUserId');
+						});
+					};
+					getStartTagsByUserId(1);
 					$('.getChannelByUserId').on('click','li', function(event){
 						alert($('.getChannelByUserId li').val());	
 					});
@@ -98,19 +113,19 @@
 						else
 							$('.inputChannel').css('background-color', 'red');
 					});
-					var fillUserTagsByUserId = function(userid){
-						$.getJSON(restservice, { 
-								Tags: 'getTagsByUserId',
-								userId: userid
-							}, function(data) {
-						    $.each(data, function(index, element) {
-						        $('.getChannelByUserId').append($('<li>', {
-						            text: element.title
-						        }).append($('<a>', { href: element.title})));
-						    });
+					var loadStartTagByUserId = function(userid){
+						$.getJSON(restservices, { 
+							Users: 'getStartTagsByUserId',
+							userId: userid
+						}, function(user) {
+							$('.verticalLogIOnBox').empty();
+							$('#content-topbox').append($('<label>', text:'Your startchannels:').after($('<br/>')));
+							$.each(user[0], function(index, element){
+								$('.getTagsByUserId').append($('<li/>', { text: element }));
+							});
+							
 						});
-					};
-					fillUserTagsByUserId('1');
+					};	
 					</script>
 					<div id="content-middle-buttom">
 					<!-- 					<?php 
